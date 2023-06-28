@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: logstash-service
+  namespace: default
+spec:
+  selector:
+    app: logstash
+  ports:
+  - protocol: TCP
+    port: 5044
+    targetPort: 5044
+  type: NodePort
